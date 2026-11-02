@@ -1,27 +1,24 @@
-# Task 5 – Root segmentation
+# Residual U-Net for Root Segmentation
 
-For this task I trained a residual U-Net to detect roots in Petri dish images and wrote an inference notebook to use it on a raw image.
+Fine plant roots occupy very few pixels and are easy to lose during preprocessing. This component trains a residual U-Net to predict binary root masks from image patches and reconstructs full-resolution predictions during inference.
 
-## What I used
+## Model and data preparation
 
-I used the 512 × 512 image and mask patches I prepared in Task 4. My training set has 9,600 patches from Y2B_23 and Y2B_24, and the validation set has 612 patches from the Y2B_25 `val_` images. I kept the validation images out of training.
+The [training notebook](task_5_training.ipynb) uses **512 × 512** patches, residual blocks, group normalization, and a combined Dice, binary cross-entropy, and soft-clDice loss. Root-density-aware sampling helps prevent nearly empty patches from dominating optimization.
 
-I used a residual U-Net with group normalization and a loss combining Dice, BCE and soft clDice. I also balanced the training patches by root density because a lot of patches contain very few root pixels.
+The documented training experiment used **9,600 training patches** and **612 validation patches** drawn from distinct imaging groups. The validation protocol and grouping are described in the notebook.
 
-## My result
+## Recorded result
 
-My best recorded validation F1 was **0.8024**. Early stopping restored the weights from epoch 13. The training notebook includes the original training log, validation scores and performance plots.
+The best reported validation **F1 is 0.8024**, with early stopping restoring the checkpoint from epoch 13. This is the documented validation result, not a guarantee of performance on unrelated plant species or imaging setups.
 
 ## Files
 
-`task_5_training.ipynb` contains the training code and saved results. `task_5_inference.ipynb` loads my model, processes `task5_test_image.png` and saves the final prediction.
+- [`task_5_training.ipynb`](task_5_training.ipynb): training configuration, loss design, and learning curves
+- [`task_5_inference.ipynb`](task_5_inference.ipynb): raw-image inference, prediction reconstruction, and mask checks
 
-`NikaSoleimanzadeh_244258_unet_model_512px.h5` is the trained model I use for inference. I kept the filename the same in both notebooks.
+The original NPEC-data-trained `.h5` checkpoint and client-derived prediction images **must not be published**. To reproduce a public demonstration, train a new model on permitted public or synthetic data and document its license and evaluation separately.
 
-`task5_test_image_prediction_nikasoleimanzadeh_244258.png` is the binary prediction for the test image. It should be the PNG saved directly by the inference code, with the same dimensions as the original image (4112 × 3006 pixels) and only 0 and 255 pixel values. It should not be a resized preview or screenshot.
+## Limitations
 
-## Running it
-
-I run the training notebook using the prepared dataset at `/home/y2a/dataset/`. For inference, I put the `.h5` file and `task5_test_image.png` in the notebook's working directory, then run the inference notebook from top to bottom. The last code cell saves the prediction PNG.
-
-I used `tf_keras` for both training and inference so the custom group normalization layer loads correctly. The image preprocessing, mask reconstruction and output checks are in the inference notebook.
+Some scripts assume the original server's `/home/y2a/...` paths. Full reproducibility also requires a clearly versioned environment, externally available data, and held-out full-image testing.

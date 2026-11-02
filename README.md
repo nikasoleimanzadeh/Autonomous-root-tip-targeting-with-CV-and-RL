@@ -56,16 +56,9 @@ See each component's README for methods, data splits, metrics, and limitations. 
 
 Python · OpenCV · NumPy · Jupyter · TensorFlow / tf-keras · Matplotlib · PyBullet · Gymnasium · Stable-Baselines3 · MLflow · Git
 
-## Try the public-safe demonstration
+## Reproducibility and demonstrations
 
-For a quick, reproducible walkthrough without private datasets, checkpoints, or an OT-2 installation, run the **[synthetic coordinate-handoff demo](demos/README.md)**. It uses only the Python standard library and generates fictional root traces, robot-space targets, an SVG, and a JSON report.
-
-```powershell
-python demos/synthetic_pipeline.py --output demo-output
-python -m unittest discover -s tests -v
-```
-
-This is an **illustrative geometry and coordinate transformation demo**, not trained computer-vision inference or a physically validated robotic controller. The underlying experiments and full pipeline are documented separately below.
+A separate synthetic-data demo is available as an optional reproducibility upgrade. It illustrates coordinate handling without relying on protected project assets; it does not replace the trained segmentation model or the OT-2 simulator.
 
 ## Running and reproducing work
 
