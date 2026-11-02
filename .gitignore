@@ -1,0 +1,9 @@
+*.DS_Store
+# Python cache files
+__pycache__/
+*.pyc
+
+# Generated package metadata
+*.egg-info/
+.pytest_cache/
+.venv/

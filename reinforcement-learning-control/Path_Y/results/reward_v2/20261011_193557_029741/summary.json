@@ -1,0 +1,22 @@
+{
+  "phase": "Path Y Phase 4 reward audit / NO RL TRAINING",
+  "gamma": 0.99,
+  "max_steps": 600,
+  "reward_version": "bounded dense distance v2",
+  "audit_case_count": 10,
+  "unsafe_preferred_count": 0,
+  "physical_P_cases": 6,
+  "physical_P_settled": 6,
+  "physical_P_better_return_than_zero": true,
+  "terminal_branch_checks": {
+    "actual_settled_bonus_once": true,
+    "mocked_unsafe_cost_applied_once": true,
+    "unsafe_was_physically_reached": false
+  },
+  "limitations": [
+    "Reward audit uses gamma=0.99; re-run/rework if gamma changes.",
+    "Proportional control is diagnostic, NOT trained reinforcement learning.",
+    "Mocked unsafe path tests code only; not a real crash or collision.",
+    "Six deterministic start-target cases cannot prove full-workspace success."
+  ]
+}

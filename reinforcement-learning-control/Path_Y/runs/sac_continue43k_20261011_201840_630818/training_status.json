@@ -1,0 +1,7 @@
+{
+  "status": "trained",
+  "total_timesteps": 63000,
+  "episodes_finished_this_run": 42,
+  "settled_in_training": 12,
+  "unsafe_in_training": 0
+}

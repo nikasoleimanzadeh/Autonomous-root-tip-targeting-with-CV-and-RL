@@ -1,0 +1,23 @@
+{
+  "source_model": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\sac_continue43k_20261011_201840_630818\\checkpoints\\sac_0053000_steps.zip",
+  "source_sha256": "88c35c5cb18ff313c5a38156b812cededc698817601ae478466ceb2fde06a414",
+  "source_replay": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\sac_continue43k_20261011_201840_630818\\checkpoints\\sac_0053000_steps.replay.pkl",
+  "source_replay_sha256": "ebaabe7b91d4a83342352546929e836d575907b6de005258a048a02bdb2eedb4",
+  "environment_sha256": "5391a7522e8fff0d5e27cb78c285df9fda0946885347a1f5c547affe78a1fbfe",
+  "seed": 820161,
+  "selection_seed": 32671841,
+  "holdout_seed": 32671842,
+  "P_teacher_gain": 80.0,
+  "teacher_only_training": true,
+  "teacher_at_inference": false,
+  "inference_action_caps": false,
+  "alg": "SAC + full-workspace expert data + BC actor fine-tune + SAC follow-up",
+  "parameters": {
+    "bc_updates": 3500,
+    "bc_lr": 0.0001,
+    "rl_steps": 3000,
+    "selection_per_group": 20,
+    "holdout_per_group": 50
+  },
+  "limitation": "Performance must be measured; imitation and SAC can regress."
+}

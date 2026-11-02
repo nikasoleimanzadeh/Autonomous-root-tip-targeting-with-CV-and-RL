@@ -1,0 +1,42 @@
+{
+  "model_path": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\final_push_20261012_155636_757034\\best_learned_sac_model.zip",
+  "model_sha256": "1ea690ff84ecbc3965cd36cee90fa406ed11db5bd784d1ac8a3cf211ed80b4e5",
+  "holdout_file": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\final_push_20261012_155636_757034\\holdout_cases_DO_NOT_TUNE_ON.json",
+  "holdout_count": 100,
+  "note": "SAC actor initialized by RL then improved using expert imitation; no teacher at inference. P: Kp=80 only. PID: Kp=80, Ki=0.25, Kd=0.01, assumed 240 Hz. PID gains fixed before running the holdout, not independently optimized.",
+  "metrics": {
+    "rl": {
+      "count": 100,
+      "settled_count": 87,
+      "settled_rate": 0.87,
+      "final_under_1mm_count": 87,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.64112572,
+      "median_final_error_mm": 0.500726,
+      "max_final_error_mm": 3.111044,
+      "mean_steps": 127.16
+    },
+    "p": {
+      "count": 100,
+      "settled_count": 100,
+      "settled_rate": 1.0,
+      "final_under_1mm_count": 100,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.02185811,
+      "median_final_error_mm": 0.021559500000000002,
+      "max_final_error_mm": 0.052039,
+      "mean_steps": 50.93
+    },
+    "pid": {
+      "count": 100,
+      "settled_count": 100,
+      "settled_rate": 1.0,
+      "final_under_1mm_count": 100,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.06271388,
+      "median_final_error_mm": 0.040652,
+      "max_final_error_mm": 0.210872,
+      "mean_steps": 50.95
+    }
+  }
+}

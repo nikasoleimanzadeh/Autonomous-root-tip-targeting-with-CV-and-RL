@@ -1,0 +1,200 @@
+{
+  "passed": true,
+  "calibration_mode": "assumed_simulation",
+  "simulation_specimen_geometry_checked": true,
+  "camera_to_plate_calibration_verified": false,
+  "limitation": "Synthetic points check the defined pixel->world convention. No measured correspondences establish camera/image alignment or root-tip accuracy.",
+  "plates": [
+    {
+      "plate": "test_image_01",
+      "width_px": 2723,
+      "height_px": 2775,
+      "passed": true,
+      "centre_error_mm": 2.7755575615628914e-14,
+      "max_inverse_error_px": 1.1368683772161603e-13,
+      "max_expected_world_error_mm": 2.7755575615628914e-14,
+      "image_right_is_world_positive_y": true,
+      "image_down_is_world_negative_x": true,
+      "min_pairwise_separation_mm": 74.99999999999999,
+      "quadrants": {
+        "top_left": {
+          "pixel_xy": [
+            680.75,
+            693.75
+          ],
+          "world_xy_m": [
+            0.22019999999999998,
+            0.0995
+          ]
+        },
+        "top_right": {
+          "pixel_xy": [
+            2042.25,
+            693.75
+          ],
+          "world_xy_m": [
+            0.22019999999999998,
+            0.17450000000000002
+          ]
+        },
+        "bottom_left": {
+          "pixel_xy": [
+            680.75,
+            2081.25
+          ],
+          "world_xy_m": [
+            0.1452,
+            0.0995
+          ]
+        },
+        "bottom_right": {
+          "pixel_xy": [
+            2042.25,
+            2081.25
+          ],
+          "world_xy_m": [
+            0.1452,
+            0.17450000000000002
+          ]
+        }
+      },
+      "physically_measured": false
+    },
+    {
+      "plate": "test_image_02",
+      "width_px": 2724,
+      "height_px": 2774,
+      "passed": true,
+      "centre_error_mm": 2.7755575615628914e-14,
+      "max_inverse_error_px": 2.2737367544323206e-13,
+      "max_expected_world_error_mm": 3.925231146709438e-14,
+      "image_right_is_world_positive_y": true,
+      "image_down_is_world_negative_x": true,
+      "min_pairwise_separation_mm": 74.99999999999999,
+      "quadrants": {
+        "top_left": {
+          "pixel_xy": [
+            681.0,
+            693.5
+          ],
+          "world_xy_m": [
+            0.22019999999999998,
+            0.0995
+          ]
+        },
+        "top_right": {
+          "pixel_xy": [
+            2043.0,
+            693.5
+          ],
+          "world_xy_m": [
+            0.22019999999999998,
+            0.1745
+          ]
+        },
+        "bottom_left": {
+          "pixel_xy": [
+            681.0,
+            2080.5
+          ],
+          "world_xy_m": [
+            0.1452,
+            0.0995
+          ]
+        },
+        "bottom_right": {
+          "pixel_xy": [
+            2043.0,
+            2080.5
+          ],
+          "world_xy_m": [
+            0.1452,
+            0.1745
+          ]
+        }
+      },
+      "physically_measured": false
+    },
+    {
+      "plate": "test_image_04",
+      "width_px": 2660,
+      "height_px": 2742,
+      "passed": true,
+      "centre_error_mm": 2.7755575615628914e-14,
+      "max_inverse_error_px": 1.1368683772161603e-13,
+      "max_expected_world_error_mm": 2.7755575615628914e-14,
+      "image_right_is_world_positive_y": true,
+      "image_down_is_world_negative_x": true,
+      "min_pairwise_separation_mm": 74.99999999999999,
+      "quadrants": {
+        "top_left": {
+          "pixel_xy": [
+            665.0,
+            685.5
+          ],
+          "world_xy_m": [
+            0.22019999999999998,
+            0.0995
+          ]
+        },
+        "top_right": {
+          "pixel_xy": [
+            1995.0,
+            685.5
+          ],
+          "world_xy_m": [
+            0.22019999999999998,
+            0.17450000000000002
+          ]
+        },
+        "bottom_left": {
+          "pixel_xy": [
+            665.0,
+            2056.5
+          ],
+          "world_xy_m": [
+            0.1452,
+            0.0995
+          ]
+        },
+        "bottom_right": {
+          "pixel_xy": [
+            1995.0,
+            2056.5
+          ],
+          "world_xy_m": [
+            0.1452,
+            0.17450000000000002
+          ]
+        }
+      },
+      "physically_measured": false
+    }
+  ],
+  "loaded_simulator": {
+    "passed": true,
+    "checks": {
+      "xy_centre": true,
+      "plate_xy_size": true,
+      "surface_z": true,
+      "orientation": true
+    },
+    "specimen_position_m": [
+      0.1827,
+      0.137,
+      0.087
+    ],
+    "specimen_euler_rad": [
+      0.0,
+      0.0,
+      -1.5707963267948963
+    ],
+    "collision_box_dimensions_m": [
+      0.15,
+      0.15,
+      0.015
+    ],
+    "computed_surface_z_m": 0.0945,
+    "does_not_verify_photo_alignment": true
+  }
+}

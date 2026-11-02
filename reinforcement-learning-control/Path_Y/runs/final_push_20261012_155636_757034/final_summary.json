@@ -1,0 +1,144 @@
+{
+  "best_selection": "bc_3500",
+  "best_path": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\final_push_20261012_155636_757034\\checkpoints\\bc_3500.zip",
+  "model_for_task12": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\final_push_20261012_155636_757034\\best_learned_sac_model.zip",
+  "selection_scores": {
+    "vanilla53": {
+      "count": 40,
+      "settled_count": 11,
+      "settled_rate": 0.275,
+      "final_under_1mm_count": 14,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 1.938328825,
+      "median_final_error_mm": 1.9762940000000002,
+      "max_final_error_mm": 6.010829,
+      "mean_steps": 491.1
+    },
+    "bc_750": {
+      "count": 40,
+      "settled_count": 14,
+      "settled_rate": 0.35,
+      "final_under_1mm_count": 15,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 1.70663665,
+      "median_final_error_mm": 1.38544,
+      "max_final_error_mm": 4.754281,
+      "mean_steps": 414.9
+    },
+    "bc_1500": {
+      "count": 40,
+      "settled_count": 18,
+      "settled_rate": 0.45,
+      "final_under_1mm_count": 18,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 1.260480625,
+      "median_final_error_mm": 1.0566399999999998,
+      "max_final_error_mm": 4.84002,
+      "mean_steps": 365.375
+    },
+    "bc_2500": {
+      "count": 40,
+      "settled_count": 29,
+      "settled_rate": 0.725,
+      "final_under_1mm_count": 31,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.886095225,
+      "median_final_error_mm": 0.7963985,
+      "max_final_error_mm": 3.23618,
+      "mean_steps": 206.975
+    },
+    "bc_3500": {
+      "count": 40,
+      "settled_count": 33,
+      "settled_rate": 0.825,
+      "final_under_1mm_count": 33,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.71684355,
+      "median_final_error_mm": 0.628404,
+      "max_final_error_mm": 2.750251,
+      "mean_steps": 151.1
+    },
+    "bc_final": {
+      "count": 40,
+      "settled_count": 33,
+      "settled_rate": 0.825,
+      "final_under_1mm_count": 33,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.71684355,
+      "median_final_error_mm": 0.628404,
+      "max_final_error_mm": 2.750251,
+      "mean_steps": 151.1
+    },
+    "guided_rl_54000": {
+      "count": 40,
+      "settled_count": 8,
+      "settled_rate": 0.2,
+      "final_under_1mm_count": 8,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 1.9135848750000002,
+      "median_final_error_mm": 1.5066570000000001,
+      "max_final_error_mm": 5.712282,
+      "mean_steps": 520.725
+    },
+    "guided_rl_56000": {
+      "count": 40,
+      "settled_count": 16,
+      "settled_rate": 0.4,
+      "final_under_1mm_count": 16,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 1.57400385,
+      "median_final_error_mm": 1.4850335000000001,
+      "max_final_error_mm": 4.356845,
+      "mean_steps": 415.925
+    },
+    "guided_rl_final": {
+      "count": 40,
+      "settled_count": 17,
+      "settled_rate": 0.425,
+      "final_under_1mm_count": 17,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 1.431480325,
+      "median_final_error_mm": 1.2518305,
+      "max_final_error_mm": 4.893137,
+      "mean_steps": 409.675
+    }
+  },
+  "holdout_stats": {
+    "all": {
+      "count": 100,
+      "settled_count": 87,
+      "settled_rate": 0.87,
+      "final_under_1mm_count": 87,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.64112572,
+      "median_final_error_mm": 0.500726,
+      "max_final_error_mm": 3.111044,
+      "mean_steps": 127.16
+    },
+    "near": {
+      "count": 50,
+      "settled_count": 43,
+      "settled_rate": 0.86,
+      "final_under_1mm_count": 43,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.6535352200000001,
+      "median_final_error_mm": 0.503349,
+      "max_final_error_mm": 3.111044,
+      "mean_steps": 115.92
+    },
+    "wide": {
+      "count": 50,
+      "settled_count": 44,
+      "settled_rate": 0.88,
+      "final_under_1mm_count": 44,
+      "unsafe_count": 0,
+      "mean_final_error_mm": 0.62871622,
+      "median_final_error_mm": 0.497977,
+      "max_final_error_mm": 2.366302,
+      "mean_steps": 138.4
+    }
+  },
+  "strict_submm_all_targets_test": false,
+  "status": "completed",
+  "notes": "Selected using validation only. No PID, caps or teacher at inference; not an official grading decision. Task 12 integration not tested."
+}

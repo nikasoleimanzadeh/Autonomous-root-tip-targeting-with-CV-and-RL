@@ -1,0 +1,39 @@
+{
+  "source": "User Task 7 output (not Ali model)",
+  "tip_status_counts": {
+    "total": 87,
+    "selected": 76,
+    "excluded_status": 11
+  },
+  "selected_plates": [
+    "test_image_01",
+    "test_image_02",
+    "test_image_04"
+  ],
+  "calibrations": {
+    "test_image_01": {
+      "status": "assumed_simulation",
+      "calibration_verified": false,
+      "held_out_max_error_mm": null,
+      "crop_width": 2723,
+      "crop_height": 2775
+    },
+    "test_image_02": {
+      "status": "assumed_simulation",
+      "calibration_verified": false,
+      "held_out_max_error_mm": null,
+      "crop_width": 2724,
+      "crop_height": 2774
+    },
+    "test_image_04": {
+      "status": "assumed_simulation",
+      "calibration_verified": false,
+      "held_out_max_error_mm": null,
+      "crop_width": 2660,
+      "crop_height": 2742
+    }
+  },
+  "n_targets": 13,
+  "executed_in_simulator": true,
+  "calibration_note": "Assumed simulation plate map is not independently validated."
+}

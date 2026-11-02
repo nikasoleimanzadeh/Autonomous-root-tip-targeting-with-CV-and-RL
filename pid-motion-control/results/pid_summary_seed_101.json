@@ -1,0 +1,10 @@
+{
+  "n_targets": 20,
+  "mean_final_error_mm": 3.7737607640847843e-05,
+  "median_final_error_mm": 2.5439994736624956e-06,
+  "max_final_error_mm": 0.0002884005065230494,
+  "success_rate_under_1mm_percent": 100.0,
+  "mean_settle_time_s": 0.24958333333333335,
+  "max_settle_time_s": 0.325,
+  "rubric_top_tier": true
+}

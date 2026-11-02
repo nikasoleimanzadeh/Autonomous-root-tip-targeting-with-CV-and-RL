@@ -1,0 +1,28 @@
+{
+  "run_type": "Path Y SAC 43k->63k continued \u2014 exploratory, not final",
+  "source_run": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\sac_continue23k_20261011_200653_789021",
+  "model_sha256": "888f3117887baa7ae12efe2a5f8507c9be58ac211bed72ffe46f718188ce472e",
+  "replay_sha256": "17d0931fb39f17261501be689dc8ca1509916356e5dae6dec29b6e9d84ab9e9d",
+  "environment_sha256": "5391a7522e8fff0d5e27cb78c285df9fda0946885347a1f5c547affe78a1fbfe",
+  "source_steps": 43000,
+  "additional_steps": 20000,
+  "final_expected_steps": 63000,
+  "checkpoint_every": 5000,
+  "algorithm": "SAC",
+  "policy": "MlpPolicy",
+  "training_start_strategy": "uniform",
+  "learning_rate": 0.0003,
+  "gamma": 0.99,
+  "batch_size": 128,
+  "network": [
+    128,
+    128
+  ],
+  "reward": "V2 dense bounded, +5 settled, -120 unsafe",
+  "selection_seeds": [
+    7341,
+    91337
+  ],
+  "fresh_holdout_seed": 271828,
+  "evaluation_isolation": "Training simulator closes before separate evaluation simulator opens"
+}

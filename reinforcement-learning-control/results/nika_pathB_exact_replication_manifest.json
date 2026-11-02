@@ -1,0 +1,38 @@
+{
+  "experiment_name": "nika_pathB_exact_replication",
+  "fresh_policy": true,
+  "ppo_seed": 42,
+  "train_env_base_seed": 43,
+  "train_env_seeds": [
+    43,
+    44,
+    45,
+    46
+  ],
+  "eval_env_seed": 5043,
+  "randomise_start_training": true,
+  "randomise_start_eval": true,
+  "total_timesteps_requested": 3300000,
+  "n_envs": 4,
+  "max_episode_steps": 600,
+  "success_threshold_mm": 1.0,
+  "dwell_steps": 10,
+  "learning_rate": 0.0003,
+  "n_steps": 2048,
+  "batch_size": 64,
+  "n_epochs": 10,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_range": 0.2,
+  "ent_coef": 0.0,
+  "vf_coef": 0.5,
+  "max_grad_norm": 0.5,
+  "net_arch": [
+    128,
+    128
+  ],
+  "target_kl": null,
+  "actual_final_timesteps": 3301376,
+  "final_model": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\weights\\nika_pathB_exact_replication_final.zip",
+  "best_model_dir": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\weights\\nika_pathB_exact_replication_best"
+}

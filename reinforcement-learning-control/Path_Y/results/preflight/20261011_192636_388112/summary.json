@@ -1,0 +1,20 @@
+{
+  "phase": "Path Y Phase 3 pretraining gate (not RL)",
+  "environment_source": "path_y_env.py (unchanged)",
+  "reward": "Current dense negative distance reward",
+  "gamma_for_analytic_audit": 0.99,
+  "max_steps": 600,
+  "unsafe_penalty": 50.0,
+  "reward_unsafe_preference_flag_count": 9,
+  "reward_audit_distances": 10,
+  "p_cases": 18,
+  "p_settled": 18,
+  "p_unsafe": 0,
+  "p_time_limit": 0,
+  "p_max_final_error_mm": 0.025992743822059253,
+  "remarks": [
+    "Analytic return comparison assumes fixed distance or immediate unsafe outcome; it is not an actual policy rollout.",
+    "P-control is a diagnostic baseline, not an RL model or Task 11 individual submission.",
+    "Reaching sample targets with P-control does not guarantee whole-envelope controllability or RL generalization."
+  ]
+}

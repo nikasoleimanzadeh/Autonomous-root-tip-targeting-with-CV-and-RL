@@ -1,0 +1,14 @@
+{
+  "mode": "assumed_simulation",
+  "plate_center_xy_m": [
+    0.1827,
+    0.137
+  ],
+  "plate_size_xy_m": [
+    0.15,
+    0.15
+  ],
+  "hover_z_m": 0.175,
+  "plate_surface_z_m": 0.0945,
+  "warning": "Plate geometry checked against the loaded user PyBullet specimen pose (centre 0.1827,0.137,0.087 m; -90 degrees; 150x150x15 mm). Mapping of the original photographed crop to the specimen remains an ASSUMPTION; no measured camera/photo-to-world landmarks exist. The hover at z=0.175 m is above the plate; no physical dispensing."
+}

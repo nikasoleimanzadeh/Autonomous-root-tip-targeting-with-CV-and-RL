@@ -1,0 +1,9 @@
+{
+  "n_targets": 13,
+  "n_simulated_deposits": 13,
+  "success_percent": 100.0,
+  "mean_pid_position_error_mm": 0.44276918573664437,
+  "max_pid_position_error_mm": 0.44326180871442955,
+  "error_definition": "3-D pipette pose minus requested *mapped* target; NOT independently measured root-tip error",
+  "calibration_verified_all": false
+}

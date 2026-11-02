@@ -1,0 +1,9 @@
+case,group,start_distance_mm,min_error_mm,final_error_mm,steps,settled,unsafe,reason,total_reward,steps_under_1mm,steps_under_2mm,max_consecutive_under_1mm,first_under_1mm_step,mean_last_30_error_mm,mean_last_30_action_norm,mean_action_norm_inside_3mm
+near_01,near,21.7499,1.909793,4.32332,600,False,False,time_limit,-120.444424,0,9,0,,4.284991,0.668282,0.621561
+near_02,near,54.926416,0.255559,0.463271,38,True,False,settled,-5.939533,11,13,10,14,5.166823,0.987078,0.793634
+near_03,near,53.706423,0.200428,0.73866,304,True,False,settled,-38.203383,101,273,10,32,0.879282,0.807434,0.823946
+near_04,near,27.90653,0.258598,2.404334,600,False,False,time_limit,-95.115425,17,351,5,27,2.515703,0.775629,0.851124
+wide_01,wide,179.298335,1.814041,2.81019,600,False,False,time_limit,-135.336704,0,12,0,,2.811281,0.919668,0.894064
+wide_02,wide,116.675335,0.345434,1.475392,600,False,False,time_limit,-83.787149,143,560,4,39,1.066327,0.691343,0.694364
+wide_03,wide,346.984925,0.308562,1.157428,600,False,False,time_limit,-128.868363,129,478,9,113,0.977095,0.769026,0.843571
+wide_04,wide,125.185866,0.282622,0.435002,88,True,False,settled,-23.050779,15,44,10,48,1.035366,0.834621,0.838476

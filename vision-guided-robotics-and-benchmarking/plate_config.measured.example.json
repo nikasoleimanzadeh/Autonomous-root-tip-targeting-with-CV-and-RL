@@ -1,0 +1,14 @@
+{
+  "mode": "measured_affine",
+  "plates": {
+    "test_image_01": {
+      "image_width_px": 2600,
+      "image_height_px": 2700,
+      "matrix_xy_m": [[0.0, -0.0000555556, 0.2577], [0.0000576923, 0.0, 0.0620]],
+      "hover_z_m": 0.175,
+      "held_out_max_error_mm": null,
+      "verified": false,
+      "warning": "EXAMPLE ONLY: replace dimensions, fitted affine matrix and held-out validation before use. Do not set verified=true based on affine round-trip alone."
+    }
+  }
+}

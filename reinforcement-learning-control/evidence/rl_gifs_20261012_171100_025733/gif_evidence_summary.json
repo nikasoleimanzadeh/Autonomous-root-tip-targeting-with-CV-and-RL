@@ -1,0 +1,32 @@
+{
+  "model_sha256": "1ea690ff84ecbc3965cd36cee90fa406ed11db5bd784d1ac8a3cf211ed80b4e5",
+  "examples": [
+    {
+      "case": "wide_04",
+      "group": "wide",
+      "source": "Original frozen 100-case holdout; successful case chosen for visual demonstration",
+      "controller": "Best SAC checkpoint (RL-initialized, imitation-fine-tuned); deterministic inference",
+      "initial_distance_mm": 408.018743,
+      "final_error_mm": 0.20652,
+      "steps": 105,
+      "settled": true,
+      "unsafe": false,
+      "source_reference_final_error_mm": 0.20652,
+      "gif": "wide_04_SAC_success.gif"
+    },
+    {
+      "case": "near_19",
+      "group": "near",
+      "source": "Original frozen 100-case holdout; successful case chosen for visual demonstration",
+      "controller": "Best SAC checkpoint (RL-initialized, imitation-fine-tuned); deterministic inference",
+      "initial_distance_mm": 56.884207,
+      "final_error_mm": 0.275928,
+      "steps": 40,
+      "settled": true,
+      "unsafe": false,
+      "source_reference_final_error_mm": 0.275928,
+      "gif": "near_19_SAC_success.gif"
+    }
+  ],
+  "note": "These GIFs are illustrative successful episodes, NOT the full success rate. Full holdout is 87/100 settled with 0.6411 mm mean final error."
+}

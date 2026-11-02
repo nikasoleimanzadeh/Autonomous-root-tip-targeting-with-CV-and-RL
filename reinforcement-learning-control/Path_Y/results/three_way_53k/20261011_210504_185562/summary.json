@@ -1,0 +1,153 @@
+{
+  "seed": 802611,
+  "cases": 60,
+  "summaries": {
+    "protected_43k": {
+      "all": {
+        "count": 60,
+        "settled_count": 14,
+        "settled_rate": 0.23333333333333334,
+        "final_under_1mm_count": 16,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 2.0635547,
+        "median_final_error_mm": 2.058545,
+        "max_final_error_mm": 4.943432,
+        "mean_steps": 514.9166666666666
+      },
+      "near": {
+        "count": 30,
+        "settled_count": 7,
+        "settled_rate": 0.23333333333333334,
+        "final_under_1mm_count": 8,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 2.0791665666666663,
+        "median_final_error_mm": 2.1245685,
+        "max_final_error_mm": 4.943432,
+        "mean_steps": 513.4666666666667
+      },
+      "wide": {
+        "count": 30,
+        "settled_count": 7,
+        "settled_rate": 0.23333333333333334,
+        "final_under_1mm_count": 8,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 2.0479428333333334,
+        "median_final_error_mm": 2.058545,
+        "max_final_error_mm": 4.425228,
+        "mean_steps": 516.3666666666667
+      }
+    },
+    "vanilla_53k": {
+      "all": {
+        "count": 60,
+        "settled_count": 23,
+        "settled_rate": 0.38333333333333336,
+        "final_under_1mm_count": 25,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 1.6574383666666666,
+        "median_final_error_mm": 1.6217614999999999,
+        "max_final_error_mm": 4.761213,
+        "mean_steps": 417.4
+      },
+      "near": {
+        "count": 30,
+        "settled_count": 12,
+        "settled_rate": 0.4,
+        "final_under_1mm_count": 14,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 1.614940433333333,
+        "median_final_error_mm": 1.5714774999999999,
+        "max_final_error_mm": 4.761213,
+        "mean_steps": 395.1666666666667
+      },
+      "wide": {
+        "count": 30,
+        "settled_count": 11,
+        "settled_rate": 0.36666666666666664,
+        "final_under_1mm_count": 11,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 1.6999363000000003,
+        "median_final_error_mm": 1.6469185,
+        "max_final_error_mm": 3.807348,
+        "mean_steps": 439.6333333333333
+      }
+    },
+    "precision_53k": {
+      "all": {
+        "count": 60,
+        "settled_count": 19,
+        "settled_rate": 0.31666666666666665,
+        "final_under_1mm_count": 21,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 1.8431307666666663,
+        "median_final_error_mm": 1.495256,
+        "max_final_error_mm": 5.778541,
+        "mean_steps": 460.1666666666667
+      },
+      "near": {
+        "count": 30,
+        "settled_count": 9,
+        "settled_rate": 0.3,
+        "final_under_1mm_count": 9,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 1.8705890666666667,
+        "median_final_error_mm": 1.5539960000000002,
+        "max_final_error_mm": 5.778541,
+        "mean_steps": 458.2
+      },
+      "wide": {
+        "count": 30,
+        "settled_count": 10,
+        "settled_rate": 0.3333333333333333,
+        "final_under_1mm_count": 12,
+        "unsafe_count": 0,
+        "mean_final_error_mm": 1.8156724666666666,
+        "median_final_error_mm": 1.4837345,
+        "max_final_error_mm": 5.230584,
+        "mean_steps": 462.1333333333333
+      }
+    }
+  },
+  "paired_comparisons": [
+    {
+      "comparing": "precision_53k",
+      "against": "vanilla_53k",
+      "test_cases": 60,
+      "a_lower_final_error_cases": 23,
+      "a_higher_final_error_cases": 37,
+      "equal_error_cases": 0,
+      "settlement_gains": 9,
+      "settlement_losses": 13,
+      "both_settled": 10,
+      "mean_error_delta_a_minus_b_mm": 0.1856924,
+      "median_error_delta_a_minus_b_mm": 0.200633
+    },
+    {
+      "comparing": "precision_53k",
+      "against": "protected_43k",
+      "test_cases": 60,
+      "a_lower_final_error_cases": 32,
+      "a_higher_final_error_cases": 28,
+      "equal_error_cases": 0,
+      "settlement_gains": 17,
+      "settlement_losses": 12,
+      "both_settled": 2,
+      "mean_error_delta_a_minus_b_mm": -0.2204239333333333,
+      "median_error_delta_a_minus_b_mm": -0.1127785
+    },
+    {
+      "comparing": "vanilla_53k",
+      "against": "protected_43k",
+      "test_cases": 60,
+      "a_lower_final_error_cases": 44,
+      "a_higher_final_error_cases": 16,
+      "equal_error_cases": 0,
+      "settlement_gains": 12,
+      "settlement_losses": 3,
+      "both_settled": 11,
+      "mean_error_delta_a_minus_b_mm": -0.40611633333333336,
+      "median_error_delta_a_minus_b_mm": -0.48941800000000013
+    }
+  ],
+  "interpretation_limit": "One paired target set and one continuation per branch. Does not prove generalization or isolate stochastic training effects."
+}

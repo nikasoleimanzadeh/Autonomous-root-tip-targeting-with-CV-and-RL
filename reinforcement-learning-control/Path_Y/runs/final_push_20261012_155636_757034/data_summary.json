@@ -1,0 +1,13 @@
+{
+  "expert_cases": 250,
+  "expert_settled": 250,
+  "examples": 45448,
+  "counts": {
+    "under_1mm": 2787,
+    "1to3mm": 12952,
+    "3to10mm": 15115,
+    "10to60mm": 3272,
+    "over_60mm": 11322
+  },
+  "expert_transitions": 6469
+}

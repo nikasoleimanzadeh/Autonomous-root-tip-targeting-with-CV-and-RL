@@ -1,0 +1,13 @@
+{
+  "model": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\weights\\ali_PPO_pathB_best.zip",
+  "tag": "ali_pathB_on_nika_environment",
+  "seed": 340258,
+  "n_targets": 20,
+  "mean_final_error_mm": 0.6009242850754741,
+  "median_final_error_mm": 0.5900511878815018,
+  "max_final_error_mm": 0.9638232016631709,
+  "min_final_error_mm": 0.26803403948171906,
+  "success_rate_under_1mm_percent": 100.0,
+  "settled_rate_percent": 100.0,
+  "rubric_top_tier": true
+}

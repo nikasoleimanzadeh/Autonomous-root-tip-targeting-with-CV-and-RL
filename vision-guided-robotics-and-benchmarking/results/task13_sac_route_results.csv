@@ -1,0 +1,14 @@
+plate,plant,simulated_deposit,approach_settled,hover_settled,retreat_settled,position_error_mm,approach_reason,hover_reason,retreat_reason,simulated_motion_time_s
+test_image_01,1,True,True,True,True,0.47094810856764036,settled,settled,settled,0.5750000000000001
+test_image_01,2,True,True,True,True,0.5810408677032475,settled,settled,settled,0.4125
+test_image_01,3,True,True,True,True,0.9503815067347019,settled,settled,settled,0.4708333333333333
+test_image_01,4,False,True,False,True,0.9497127808702822,settled,time_limit,settled,2.779166666666667
+test_image_02,1,True,True,True,True,0.28635386342371966,settled,settled,settled,0.55
+test_image_02,2,True,True,True,True,0.20053355718830113,settled,settled,settled,0.39166666666666666
+test_image_02,3,True,True,True,True,0.6019196376694351,settled,settled,settled,0.41666666666666663
+test_image_02,4,False,False,False,False,nan,time_limit,approach_failed,time_limit,5.0
+test_image_02,5,False,True,False,True,1.0754389218238314,settled,time_limit,settled,2.7666666666666666
+test_image_04,1,True,True,True,True,0.6694086480696609,settled,settled,settled,0.6458333333333333
+test_image_04,2,True,True,True,True,0.5201938675286104,settled,settled,settled,0.4291666666666667
+test_image_04,3,True,True,True,True,0.44522338453440824,settled,settled,settled,0.4083333333333333
+test_image_04,5,False,True,False,True,1.0916265750474123,settled,time_limit,settled,2.7875

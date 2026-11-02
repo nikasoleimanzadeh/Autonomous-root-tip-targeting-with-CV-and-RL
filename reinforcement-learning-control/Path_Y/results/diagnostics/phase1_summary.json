@@ -1,0 +1,19 @@
+{
+  "phase": "Path Y - phase 1 physical dynamics (not RL)",
+  "probe_count": 30,
+  "action_sign_xyz": [
+    1,
+    1,
+    1
+  ],
+  "calibration_20_step_half_action_mm": [
+    37.91444025744465,
+    38.765257749474344,
+    40.632651515153626
+  ],
+  "p_status": "completed",
+  "p_test_count": 20,
+  "p_settled_count": 20,
+  "p_unsafe_count": 0,
+  "notes": "P-controller failure does not demonstrate simulator uncontrollability: gain-only feedback may be inadequate for inertia/friction. P-controller success shows controllability of these particular starts/targets only."
+}

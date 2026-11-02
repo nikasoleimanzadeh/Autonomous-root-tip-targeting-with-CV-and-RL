@@ -1,0 +1,48 @@
+{
+  "n_targets": 2,
+  "plates": 1,
+  "model_sha256": "1ea690ff84ecbc3965cd36cee90fa406ed11db5bd784d1ac8a3cf211ed80b4e5",
+  "model_path": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task11_rl_controller\\Path_Y\\runs\\final_push_20261012_155636_757034\\best_learned_sac_model.zip",
+  "manifest_path": "C:\\Users\\ASUS\\2025-26b-fai2-adsai-nikasoleimanzadeh244258\\task12_13_integration_benchmarking\\results\\task12_target_manifest.csv",
+  "start_xyz_m": [
+    0.033,
+    0.024499999999999994,
+    0.22975
+  ],
+  "protocol": "Single-goal, same start, 600 steps, 1mm/10 dwell, 240 Hz",
+  "controllers": {
+    "pid": {
+      "n_targets": 2,
+      "settled": 2,
+      "settled_pct": 100.0,
+      "final_below_1mm": 2,
+      "final_below_1mm_pct": 100.0,
+      "unsafe": 0,
+      "mean_final_error_mm": 0.17223762389783076,
+      "median_final_error_mm": 0.17223762389783076,
+      "max_final_error_mm": 0.18802894045983706,
+      "p95_final_error_mm": 0.18644980880363643,
+      "mean_simulated_time_s": 0.2833333333333333,
+      "median_simulated_time_s": 0.2833333333333333,
+      "mean_rollout_wall_time_s": 0.024535649979952723,
+      "mean_steps": 68.0
+    },
+    "sac": {
+      "n_targets": 2,
+      "settled": 2,
+      "settled_pct": 100.0,
+      "final_below_1mm": 2,
+      "final_below_1mm_pct": 100.0,
+      "unsafe": 0,
+      "mean_final_error_mm": 0.2514210431627372,
+      "median_final_error_mm": 0.2514210431627372,
+      "max_final_error_mm": 0.3355250634509468,
+      "p95_final_error_mm": 0.3271146614221258,
+      "mean_simulated_time_s": 0.27083333333333337,
+      "median_simulated_time_s": 0.27083333333333337,
+      "mean_rollout_wall_time_s": 0.09631879994412884,
+      "mean_steps": 65.0
+    }
+  },
+  "photo_registration_verified": false
+}
