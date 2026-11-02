@@ -1,4 +1,4 @@
-"""Required 1,000-step random-action validation of the final Task 11 wrapper.
+"""Required 1,000-step random-action validation of the final reinforcement learning control wrapper.
 
 Run from the repository root:
     python -B task11_rl_controller/test_wrapper.py

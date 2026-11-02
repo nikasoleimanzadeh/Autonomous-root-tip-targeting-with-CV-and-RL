@@ -1,4 +1,4 @@
-# Task 15 — Final Presentation
+# Project presentation — Final Presentation
 
 ![Title slide](cover_preview.png)
 
@@ -16,8 +16,8 @@ The presentation also covers the limitations. The integrated targets use a simul
 
 | File | Purpose |
 | --- | --- |
-| [`task_15_slides.pdf`](task_15_slides.pdf) | Final slides for submission |
-| [`task_15_slides.pptx`](task_15_slides.pptx) | Editable presentation |
+| [`project_presentation.pdf`](project_presentation.pdf) | Final slides for submission |
+| [`project_presentation.pptx`](project_presentation.pptx) | Editable presentation |
 
 ## Main topics
 
@@ -28,4 +28,4 @@ The presentation also covers the limitations. The integrated targets use a simul
 5. Integration demonstrations and performance benchmarking
 6. Limitations, conclusions and next steps
 
-The detailed implementation, training, and benchmark evidence are documented in the corresponding Task 5, Task 8, and Tasks 9–13 folders. This folder contains the presentation deliverable itself.
+The detailed implementation, training, and benchmark evidence are documented in the corresponding U-Net root segmentation, Root-length prediction, and Tasks 9–13 folders. This folder contains the presentation deliverable itself.

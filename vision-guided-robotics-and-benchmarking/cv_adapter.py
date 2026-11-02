@@ -1,4 +1,4 @@
-"""Reuse the completed Task 7 CSV instead of running a different root model."""
+"""Reuse the completed root architecture extraction CSV instead of running a different root model."""
 from __future__ import annotations
 
 import csv
@@ -11,8 +11,8 @@ import math
 class RootTip:
     plate: str
     plant: int
-    x_px: float  # Task 7 tip_x = crop column
-    y_px: float  # Task 7 tip_y = crop row
+    x_px: float  # root architecture extraction tip_x = crop column
+    y_px: float  # root architecture extraction tip_y = crop row
     status: str
 
 
@@ -22,7 +22,7 @@ def _stem(name: str) -> str:
 
 def load_tips(csv_path: str | Path, allowed_statuses: tuple[str, ...] = ("OK",)
               ) -> tuple[dict[str, list[RootTip]], dict[str, int]]:
-    """Load unique Task 7 tips; skip CHECK/FAILED unless explicitly allowed."""
+    """Load unique root architecture extraction tips; skip CHECK/FAILED unless explicitly allowed."""
     required = {"image", "plant", "tip_x", "tip_y", "status"}
     by_plate: dict[str, list[RootTip]] = {}
     stats = {"total": 0, "selected": 0, "excluded_status": 0}
@@ -58,7 +58,7 @@ def load_tips(csv_path: str | Path, allowed_statuses: tuple[str, ...] = ("OK",)
 def load_crop_sizes(metadata_csv: str | Path) -> dict[str, tuple[int, int]]:
     """Use crop width/height from the *original* Petri crop metadata.
 
-    Task 7 pixel coordinates are crop-local; never add bbox x/y here.
+    root architecture extraction pixel coordinates are crop-local; never add bbox x/y here.
     Bbox x/y would be necessary only for mapping back to the raw photograph.
     """
     out: dict[str, tuple[int, int]] = {}

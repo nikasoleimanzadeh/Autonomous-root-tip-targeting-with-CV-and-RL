@@ -5,7 +5,7 @@ The project uses an Opentrons OT-2 digital twin to study 3-D pipette positioning
 ## Implementation
 
 - [`check_setup.py`](check_setup.py): environment sanity checks
-- [`task09_interaction.py`](task09_interaction.py): movement commands and state observations
+- [`robotics_interaction.py`](robotics_interaction.py): movement commands and state observations
 - [`eight_corners.py`](eight_corners.py) and [`eight_corners_gui.py`](eight_corners_gui.py): work-envelope exploration and visualization
 - [`results/`](results/): recorded coordinates and a simulation GIF
 

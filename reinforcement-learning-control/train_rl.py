@@ -1,4 +1,4 @@
-"""Train an individual PPO controller for Task 11.
+"""Train an individual PPO controller for reinforcement learning control.
 
 This script intentionally keeps experiment tracking local. It does not contain
 ClearML/W&B credentials and does not depend on another student's saved model.

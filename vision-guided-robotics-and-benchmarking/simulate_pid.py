@@ -1,6 +1,6 @@
-"""Run the original Task 10 PI controller on already converted CV targets.
+"""Run the original PID control PI controller on already converted CV targets.
 
-Uses Task 9 make_sim/teleport_safe/precise_pipette_position. Simulates a deposit
+Uses robotics simulation make_sim/teleport_safe/precise_pipette_position. Simulates a deposit
 marker only *after* 10 consecutive observations within 1 mm. Does NOT model
 liquid dispensing or biological placement error.
 """

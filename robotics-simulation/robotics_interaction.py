@@ -73,7 +73,7 @@ def main() -> None:
             sim.run([action], num_steps=steps)
             rows.append(snapshot(sim, target, label))
 
-        # Show the upstream observation dictionary too, because Task 9 asks us
+        # Show the upstream observation dictionary too, because Robotics simulation asks us
         # to process observations returned by the environment.
         raw_state = sim.get_states()
         print("\nRaw simulator state keys:")

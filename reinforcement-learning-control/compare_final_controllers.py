@@ -1,4 +1,4 @@
-"""Task 11: locked SAC versus P and PID on the SAME original 100 holdout cases.
+"""reinforcement learning control: locked SAC versus P and PID on the SAME original 100 holdout cases.
 
 Run at the repository root:
     python -B .\task11_rl_controller\compare_final_controllers.py

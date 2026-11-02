@@ -15,7 +15,7 @@ Anti-windup is conditional integration: if the output is saturated and the error
 points the same way as the integral, we stop accumulating. Simplest thing that
 stays stable without resorting to back-calculation.
 
-`min_output` is a floor that punches through the static-friction dead zone Task 9
+`min_output` is a floor that punches through the static-friction dead zone robotics simulation
 turned up for small actions. It only kicks in while |error| > settle_threshold,
 so the controller still settles to rest at the target rather than buzzing.
 

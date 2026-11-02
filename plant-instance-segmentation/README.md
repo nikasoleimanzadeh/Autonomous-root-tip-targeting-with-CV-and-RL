@@ -4,7 +4,7 @@ This component distinguishes neighboring plants before root measurements are ass
 
 ## Approach
 
-The [notebook](task_3.ipynb) locates shoots with thresholding and connected components, enhances thin roots using background subtraction and oriented morphological kernels, and links root networks back to their likely shoot locations. The method avoids simply splitting an image into vertical strips, which can cut across diagonal roots.
+The [notebook](plant_instance_segmentation.ipynb) locates shoots with thresholding and connected components, enhances thin roots using background subtraction and oriented morphological kernels, and links root networks back to their likely shoot locations. The method avoids simply splitting an image into vertical strips, which can cut across diagonal roots.
 
 ## Results
 

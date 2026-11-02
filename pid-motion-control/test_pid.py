@@ -1,4 +1,4 @@
-"""Evaluate final Task 10 gains on random 3-D targets.
+"""Evaluate final PID control gains on random 3-D targets.
 
 Outputs:
 - results/pid_test_results.csv

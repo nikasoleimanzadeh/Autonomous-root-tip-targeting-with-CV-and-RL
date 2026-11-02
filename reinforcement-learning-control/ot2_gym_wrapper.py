@@ -31,7 +31,7 @@ class OT2Env(PathYEnv):
     """Task 11 public Gymnasium wrapper; exact Path Y behavior unchanged."""
 
 
-# Backward-compatible spelling from the original Task 11 entry point.
+# Backward-compatible spelling from the original Reinforcement learning control entry point.
 OT2ENV = OT2Env
 
 __all__ = ["OT2Env", "OT2ENV", "PathYEnv"]

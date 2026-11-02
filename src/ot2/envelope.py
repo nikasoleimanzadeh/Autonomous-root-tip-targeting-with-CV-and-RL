@@ -50,7 +50,7 @@ class Envelope:
         return bool(np.all(p >= self.low + margin) and np.all(p <= self.high - margin))
 
 
-# Joint-limit AABB, world frame, metres. Source: find_envelope.py output (Task 9).
+# Joint-limit AABB, world frame, metres. Source: find_envelope.py output (Robotics simulation).
 JOINT_LIMIT_ENVELOPE = Envelope(
     x_min=-0.1870, x_max=+0.2530,
     y_min=-0.1705, y_max=+0.2195,

@@ -106,7 +106,7 @@ def drive_to(sim, target: np.ndarray, corner_idx: int, frames: list[np.ndarray])
         if consecutive >= DWELL_STEPS:
             break
 
-        # Simple Task-9 demonstration command, not the Task-10 PID.
+        # Simple Robotics simulation demonstration command, not the PID control PID.
         action_xyz = np.clip(KP_DEMO * error_vec, -MAX_ACTION, MAX_ACTION)
         sim.run(
             [[float(action_xyz[0]), float(action_xyz[1]), float(action_xyz[2]), 0]],

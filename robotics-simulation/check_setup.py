@@ -1,4 +1,4 @@
-"""Task 9 setup check.
+"""robotics simulation setup check.
 
 Run from the project root:
     python task09_robotics_environment/check_setup.py

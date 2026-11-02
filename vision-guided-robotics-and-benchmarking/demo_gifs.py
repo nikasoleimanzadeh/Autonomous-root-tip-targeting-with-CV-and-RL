@@ -1,7 +1,7 @@
-"""GIF showing the pipette's SIMULATED, MEASURED motion over a Task 5 crop.
+"""GIF showing the pipette's SIMULATED, MEASURED motion over a U-Net segmentation crop.
 
 The dot is a visualization, NOT physical dispensing. Per-frame pipette locations
-are sourced from OT-2 PyBullet via Task 9, then projected into CV image pixels.
+are sourced from OT-2 PyBullet via robotics simulation, then projected into CV image pixels.
 """
 from __future__ import annotations
 

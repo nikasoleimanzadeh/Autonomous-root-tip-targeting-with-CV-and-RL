@@ -1,6 +1,6 @@
 """Gymnasium environment for the OT-2 pipette-positioning task.
 
-Where this departs from a stock Gym wrapper, it's because of what Task 9 turned up:
+Where this departs from a stock Gym wrapper, it's because of what robotics simulation turned up:
 
 Targets and the start pose live in the practical envelope (z >= 0.170 m), not the
 raw joint-limit box. The chassis floor blocks descent below ~0.1695 m except in a
@@ -21,7 +21,7 @@ and the relative vector to the target. The target isn't passed explicitly; it sh
 up in that relative vector.
 
 Actions are 3-D continuous velocity commands in [-1, 1]. The sim's fourth `drop`
-action is pinned to 0, since dispensing isn't part of the Task 11 objective.
+action is pinned to 0, since dispensing isn't part of the reinforcement learning control objective.
 """
 from __future__ import annotations
 

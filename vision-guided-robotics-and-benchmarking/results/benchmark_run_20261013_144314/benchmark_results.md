@@ -1,9 +1,9 @@
-# Task 13 — Matched controller benchmark (auto-generated)
+# Controller benchmarking — Matched controller benchmark (auto-generated)
 
-This document reports **measured results** from the locked Task 10 controller
-and my final Task 11 Path Y SAC model, without retraining.
+This document reports **measured results** from the locked PID control controller
+and my final Reinforcement learning control Path Y SAC model, without retraining.
 
-| Metric | Task 10 tuned PID | Path Y SAC |
+| Metric | PID control tuned PID | Path Y SAC |
 |---|---:|---:|
 | CV-derived targets | 2 | 2 |
 | Settled within 1 mm for 10 steps | 2/2 (100.0%) | 2/2 (100.0%) |
@@ -16,11 +16,11 @@ and my final Task 11 Path Y SAC model, without retraining.
 
 ## Evaluation protocol
 
-Both controllers use the **same `PathYEnv`**, identical Task 12 CV mapped targets,
+Both controllers use the **same `PathYEnv`**, identical Vision-guided integration CV mapped targets,
 identical fixed initial pose (`PRACTICAL_ENVELOPE.center`), a 600-step budget,
 a 240 Hz simulator and termination after **10 consecutive steps within 1 mm**.
 SAC uses its trained 12-D observation and deterministic actions; PID uses the
-original Task 10 `build_pid()` tuned gains and precise physical position. PID
+original PID control `build_pid()` tuned gains and precise physical position. PID
 integrators are reset for each trial. This is a *single-target* head-to-head
 benchmark; reset between cases is identical for both. My trained SAC
 checkpoint is untouched.
@@ -28,25 +28,25 @@ checkpoint is untouched.
 ## Interpretation and limitations
 
 - **Mapped coordinate error:** error measures the pipette versus the requested
-  3-D coordinate produced by Task 12, *not* a measured biological root-tip error.
+  3-D coordinate produced by Vision-guided integration, *not* a measured biological root-tip error.
   Photo/plate registration remains assumed, not independently calibrated.
-- No liquid dispensing or infection biology is simulated. Task 12 deposits are
+- No liquid dispensing or infection biology is simulated. Vision-guided integration deposits are
   visual success markers, not real inoculation.
 - `simulated_time_s = steps / 240`; it is not physical hardware elapsed time.
   The CSV also contains inference/simulation wall-clock rollout duration, which
   depends on hardware and is not a fair estimate of robot actuation speed.
-- This single-target comparison must **not** be conflated with Task 12's
+- This single-target comparison must **not** be conflated with Vision-guided integration's
   separate approach/hover/retreat timings or three-plate GIFs.
 - The SAC model contains expert-imitation-guided training; inference uses only
   SAC policy actions. No PID teacher assists at inference.
 
 ## Visualizations
 
-![Settled success](task13_success_comparison.png)
+![Settled success](controller_success_comparison.png)
 
-![Matched target errors](task13_target_errors.png)
+![Matched target errors](target_errors.png)
 
-![Execution times](task13_execution_times.png)
+![Execution times](execution_times.png)
 
 ## Recommendations
 
@@ -59,4 +59,4 @@ checkpoint is untouched.
 4. Benchmark actual dispensing accuracy with measured droplet locations before
    translating this simulated waypoint performance to laboratory deployment.
 
-The comparison uses **1 distinct plates** and **2 unique CV-derived root targets**. Full per-target results are in `task13_matched_targets.csv`.
+The comparison uses **1 distinct plates** and **2 unique CV-derived root targets**. Full per-target results are in `matched_targets.csv`.

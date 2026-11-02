@@ -113,7 +113,7 @@ def main():
     p.add_argument('--calibration', type=Path, default=HERE / 'plate_config.example.json')
     p.add_argument('--previews', type=Path, default=REPO / 'task12_cv_handoff' / 'previews')
     p.add_argument('--gif-dir', type=Path, default=HERE / 'gifs')
-    p.add_argument('--output', type=Path, default=HERE / 'results' / 'task13_sac_route_results.csv')
+    p.add_argument('--output', type=Path, default=HERE / 'results' / 'sac_route_results.csv')
     p.add_argument('--max-plates', type=int, default=3)
     p.add_argument('--gif-3d', action='store_true')
     p.add_argument('--allow-assumed-plate-map', action='store_true',
@@ -143,7 +143,7 @@ def main():
                           every=45, show_3d=a.gif_3d)
         sim = make_sim(num_agents=1, render=False, rgb_array=False)
         try:
-            # Match Task 12 initialization, then keep continuous joint state
+            # Match Vision-guided integration initialization, then keep continuous joint state
             # for all waypoints within this plate.
             sim.run([[0., 0., 0., 0.]], num_steps=20)
             teleport_safe(sim, PRACTICAL_ENVELOPE.center)

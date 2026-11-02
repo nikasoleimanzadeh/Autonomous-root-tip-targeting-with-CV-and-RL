@@ -1,4 +1,4 @@
-"""Fresh Path-B PPO replication for Task 11.
+"""Fresh Path-B PPO replication for reinforcement learning control.
 
 This deliberately reproduces the effective setup of the successful reference run
 as closely as the submitted artifacts allow:

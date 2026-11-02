@@ -32,7 +32,7 @@ for folder in (REPO, REPO / 'src', REPO / 'task11_rl_controller' / 'Path_Y'):
 
 DEFAULT_MODEL = (REPO / 'task11_rl_controller' / 'Path_Y' / 'runs'
                  / 'final_push_20261012_155636_757034' / 'best_learned_sac_model.zip')
-DEFAULT_MANIFEST = HERE / 'results' / 'task12_target_manifest.csv'
+DEFAULT_MANIFEST = HERE / 'results' / 'target_manifest.csv'
 DT = 1.0 / 240.0
 MAX_STEPS = 600
 THRESHOLD_MM = 1.0
@@ -205,7 +205,7 @@ def make_plots(pid_rows: list[dict], sac_rows: list[dict], path: Path) -> None:
     for i, stat in enumerate(summaries):
         ax.text(i, stat['settled_pct'] + 1, f"{stat['settled']}/{stat['n_targets']}", ha='center')
     fig.tight_layout()
-    fig.savefig(path / 'task13_success_comparison.png', dpi=160)
+    fig.savefig(path / 'controller_success_comparison.png', dpi=160)
     plt.close(fig)
 
     fig, ax = plt.subplots(figsize=(8.5, 4.6))
@@ -217,7 +217,7 @@ def make_plots(pid_rows: list[dict], sac_rows: list[dict], path: Path) -> None:
            title='Same start and mapped targets; full errors shown')
     ax.legend()
     fig.tight_layout()
-    fig.savefig(path / 'task13_target_errors.png', dpi=160)
+    fig.savefig(path / 'target_errors.png', dpi=160)
     plt.close(fig)
 
     fig, ax = plt.subplots(figsize=(7.2, 4.6))
@@ -225,7 +225,7 @@ def make_plots(pid_rows: list[dict], sac_rows: list[dict], path: Path) -> None:
     ax.set(xticks=positions, xticklabels=names, ylabel='Mean simulated time (s / target)',
            title='Single-target time, including failures/timeouts')
     fig.tight_layout()
-    fig.savefig(path / 'task13_execution_times.png', dpi=160)
+    fig.savefig(path / 'execution_times.png', dpi=160)
     plt.close(fig)
 
 
@@ -275,11 +275,11 @@ checkpoint is untouched.
 
 ## Visualizations
 
-![Settled success](task13_success_comparison.png)
+![Settled success](controller_success_comparison.png)
 
-![Matched target errors](task13_target_errors.png)
+![Matched target errors](target_errors.png)
 
-![Execution times](task13_execution_times.png)
+![Execution times](execution_times.png)
 
 ## Recommendations
 
@@ -292,9 +292,9 @@ checkpoint is untouched.
 4. Benchmark actual dispensing accuracy with measured droplet locations before
    translating this simulated waypoint performance to laboratory deployment.
 
-The comparison uses **{summary['plates']} distinct plates** and **{summary['n_targets']} unique CV-derived root targets**. Full per-target results are in `task13_matched_targets.csv`.
+The comparison uses **{summary['plates']} distinct plates** and **{summary['n_targets']} unique CV-derived root targets**. Full per-target results are in `matched_targets.csv`.
 '''
-    (path / 'task13_results.md').write_text(text, encoding='utf-8')
+    (path / 'benchmark_results.md').write_text(text, encoding='utf-8')
 
 
 def run(model_path: Path, manifest: Path, output: Path, limit: int | None):
@@ -326,9 +326,9 @@ def run(model_path: Path, manifest: Path, output: Path, limit: int | None):
     if sha256(model_path) != model_hash:
         raise RuntimeError('MODEL CHECKPOINT CHANGED — STOP')
     matched = paired_rows(pid_rows, sac_rows)
-    save_rows(output / 'task13_pid_cases.csv', pid_rows)
-    save_rows(output / 'task13_sac_cases.csv', sac_rows)
-    save_rows(output / 'task13_matched_targets.csv', matched)
+    save_rows(output / 'pid_cases.csv', pid_rows)
+    save_rows(output / 'sac_cases.csv', sac_rows)
+    save_rows(output / 'matched_targets.csv', matched)
     summary = {'n_targets': len(cases), 'plates': len(set(c['plate'] for c in cases)),
                'model_sha256': model_hash, 'model_path': str(model_path),
                'manifest_path': str(manifest.resolve()),
@@ -336,7 +336,7 @@ def run(model_path: Path, manifest: Path, output: Path, limit: int | None):
                'protocol': 'Single-goal, same start, 600 steps, 1mm/10 dwell, 240 Hz',
                'controllers': {'pid': summarize(pid_rows), 'sac': summarize(sac_rows)},
                'photo_registration_verified': all(c['calibration_verified'] for c in cases)}
-    (output / 'task13_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
+    (output / 'benchmark_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     make_plots(pid_rows, sac_rows, output)
     write_report(output, summary, pid_rows, sac_rows)
     print('\nFINAL COMPARISON')
@@ -353,7 +353,7 @@ def main():
     parser.add_argument('--model', type=Path, default=DEFAULT_MODEL)
     parser.add_argument('--manifest', type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument('--output', type=Path, default=HERE / 'results' /
-                        ('task13_benchmark_' + datetime.now().strftime('%Y%m%d_%H%M%S')))
+                        ('benchmark_run_' + datetime.now().strftime('%Y%m%d_%H%M%S')))
     parser.add_argument('--limit', type=int, help='Only the first N CV targets (smoke test)')
     a = parser.parse_args()
     run(a.model, a.manifest, a.output, a.limit)

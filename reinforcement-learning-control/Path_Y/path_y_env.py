@@ -1,6 +1,6 @@
 """Path Y: independent, precision-oriented Gymnasium OT-2 environment.
 
-Task 11 requires the policy to learn continuous 3-axis pipette positioning.
+reinforcement learning control requires the policy to learn continuous 3-axis pipette positioning.
 This environment deliberately does NOT import Path B, Experiment Z, HER or PID.
 It uses only the validated low-level OT-2 simulator/teleport/envelope utilities.
 

@@ -1,8 +1,8 @@
-"""Task 10 PID controller builder.
+"""PID control PID controller builder.
 
 The reusable PID implementation lives in ``src/ot2/control/pid.py`` so Tasks 11–13
 can use the exact same controller. This module only loads the gains selected by
-Task 10 and constructs the three-axis controller.
+PID control and constructs the three-axis controller.
 """
 from __future__ import annotations
 

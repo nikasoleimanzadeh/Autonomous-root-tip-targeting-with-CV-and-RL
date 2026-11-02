@@ -4,7 +4,7 @@ A binary root mask is useful, but plant analysis also needs measurements for ind
 
 ## Pipeline
 
-The [main notebook](task_8.ipynb) accepts a directory of images and performs dish cropping, overlapping-patch inference, mask reconstruction, root-start detection, root grouping, and length estimation. The **V5.1 refinement** is a rule-based improvement to root-start detection, not a separately trained neural network. It filters implausible starts, recovers candidates, and merges duplicates before tracing.
+The [main notebook](root_length_prediction.ipynb) accepts a directory of images and performs dish cropping, overlapping-patch inference, mask reconstruction, root-start detection, root grouping, and length estimation. The **V5.1 refinement** is a rule-based improvement to root-start detection, not a separately trained neural network. It filters implausible starts, recovers candidates, and merges duplicates before tracing.
 
 The [`development/`](development/) notebooks record experiments with patch size, root-system architecture, and pipeline iterations. [`experiment_tracking/`](experiment_tracking/) contains the tracking structure and historical metrics.
 

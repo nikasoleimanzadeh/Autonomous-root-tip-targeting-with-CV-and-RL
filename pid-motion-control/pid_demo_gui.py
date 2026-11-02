@@ -1,6 +1,6 @@
-"""GUI demonstration of the tuned Task 10 PID controller.
+"""GUI demonstration of the tuned PID control PID controller.
 
-Screen-record this script for the Task 10 GIF evidence.
+Screen-record this script for the PID control GIF evidence.
 """
 from __future__ import annotations
 

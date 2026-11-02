@@ -4,7 +4,7 @@ Before analyzing roots, the pipeline isolates the plate from the surrounding ima
 
 ## Approach
 
-The [notebook](task_2.ipynb) uses grayscale intensity profiles, smoothing, and Otsu thresholding to estimate dish boundaries. Scharr gradients provide an independent edge estimate; the selected crop is adjusted to a square. This stage uses classical image processing rather than a trained detector.
+The [notebook](petri_dish_detection.ipynb) uses grayscale intensity profiles, smoothing, and Otsu thresholding to estimate dish boundaries. Scharr gradients provide an independent edge estimate; the selected crop is adjusted to a square. This stage uses classical image processing rather than a trained detector.
 
 ## What the experiment shows
 
@@ -12,7 +12,7 @@ Four recorded examples from different imaging batches produced square crops. The
 
 ## How to explore
 
-Open `task_2.ipynb` and set `IMAGE_DIR` to a folder of images you are allowed to use. The notebook contains historical local path assumptions that may need updating. Do not distribute restricted source images or embedded outputs.
+Open `petri_dish_detection.ipynb` and set `IMAGE_DIR` to a folder of images you are allowed to use. The notebook contains historical local path assumptions that may need updating. Do not distribute restricted source images or embedded outputs.
 
 ## Limitations
 

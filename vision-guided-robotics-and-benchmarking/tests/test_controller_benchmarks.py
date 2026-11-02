@@ -7,7 +7,7 @@ import pytest
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULE = ROOT / 'benchmark_task13.py'
+MODULE = ROOT / 'benchmark_controllers.py'
 spec = importlib.util.spec_from_file_location('benchmark_task13', MODULE)
 b = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = b
@@ -54,5 +54,5 @@ def test_reports(tmp_path):
                'controllers': {'pid': b.summarize(p), 'sac': b.summarize(r)}}
     b.make_plots(p,r,tmp_path)
     b.write_report(tmp_path,summary,p,r)
-    assert (tmp_path/'task13_results.md').exists()
+    assert (tmp_path/'benchmark_results.md').exists()
     assert len(list(tmp_path.glob('*.png'))) == 3

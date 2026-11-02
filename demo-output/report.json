@@ -1,0 +1,51 @@
+{
+  "demonstration": "synthetic coordinate handoff only",
+  "plant_count": 5,
+  "calibration_verified": false,
+  "real_cv_inference": false,
+  "robot_simulator_executed": false,
+  "robot_motion_executed": false,
+  "units": "pixel coordinates and robot-space metres",
+  "target_positions": [
+    {
+      "plant": 1,
+      "pixel_x": 57.247,
+      "pixel_y": 430,
+      "robot_x_m": 0.215325,
+      "robot_y_m": 0.076437,
+      "robot_z_m": 0.18
+    },
+    {
+      "plant": 2,
+      "pixel_x": 181.65,
+      "pixel_y": 466,
+      "robot_x_m": 0.224325,
+      "robot_y_m": 0.107537,
+      "robot_z_m": 0.18
+    },
+    {
+      "plant": 3,
+      "pixel_x": 301.999,
+      "pixel_y": 490,
+      "robot_x_m": 0.230325,
+      "robot_y_m": 0.137625,
+      "robot_z_m": 0.18
+    },
+    {
+      "plant": 4,
+      "pixel_x": 419.532,
+      "pixel_y": 430,
+      "robot_x_m": 0.215325,
+      "robot_y_m": 0.167008,
+      "robot_z_m": 0.18
+    },
+    {
+      "plant": 5,
+      "pixel_x": 536.459,
+      "pixel_y": 466,
+      "robot_x_m": 0.224325,
+      "robot_y_m": 0.19624,
+      "robot_z_m": 0.18
+    }
+  ]
+}

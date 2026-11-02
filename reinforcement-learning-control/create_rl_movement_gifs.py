@@ -1,4 +1,4 @@
-"""Task 11: record the REAL frozen SAC policy in the original OT-2 PyBullet simulator.
+"""reinforcement learning control: record the REAL frozen SAC policy in the original OT-2 PyBullet simulator.
 
 Run from the repository root:
     python -B task11_rl_controller/create_rl_movement_gifs.py

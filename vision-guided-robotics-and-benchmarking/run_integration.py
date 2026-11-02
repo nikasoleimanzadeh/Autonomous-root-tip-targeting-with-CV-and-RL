@@ -2,7 +2,7 @@
 
 From the *repository root*:
   python task12_13_integration_benchmarking/run_integration.py \
-    --tips-csv path/to/task7_primary_root_lengths.csv \
+    --tips-csv path/to/primary_root_lengths.csv \
     --crop-metadata path/to/petri_crop_metadata.csv \
     --calibration task12_13_integration_benchmarking/plate_config.example.json \
     --allow-assumed-plate-map --max-plates 3
@@ -75,18 +75,18 @@ def main() -> None:
     if not targets:
         raise RuntimeError('No valid targets selected')
     args.output.mkdir(parents=True, exist_ok=True)
-    save_csv(args.output/'task12_target_manifest.csv', targets)
+    save_csv(args.output/'target_manifest.csv', targets)
     manifest = {'source': 'User Task 7 output (not Ali model)',
                 'tip_status_counts': stats,
                 'selected_plates': list(calib_info), 'calibrations': calib_info,
                 'n_targets': len(targets), 'executed_in_simulator': bool(args.execute),
                 'calibration_note': 'Assumed simulation plate map is not independently validated.'}
-    (args.output/'task12_manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+    (args.output/'integration_manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
     print(f"Task 7: {stats['selected']} OK / {stats['total']} total tips; "
           f"{len(targets)} selected across {len(calib_info)} plates.")
     for plate, info in calib_info.items():
         print(f'  {plate}: {info["status"]}; verified={info["calibration_verified"]}')
-    print('Wrote:', args.output/'task12_target_manifest.csv')
+    print('Wrote:', args.output/'target_manifest.csv')
     if not args.execute:
         print('DRY RUN ONLY. Add --execute when the simulator and plate calibration are ready.')
         return
@@ -114,7 +114,7 @@ def main() -> None:
                 print(f'  Missing preview photo for {plate}: no GIF for this plate')
         sim = make_sim(num_agents=1, render=False, rgb_array=False)
         try:
-            # Same validated centering technique as Task 10 standalone evaluation.
+            # Same validated centering technique as PID control standalone evaluation.
             teleport_safe(sim, PRACTICAL_ENVELOPE.center)
             result = run_plate(sim, pid, selected, renderer=gif)
             results.extend(result)
@@ -126,7 +126,7 @@ def main() -> None:
         print(f'  {plate}: {sum(r["simulated_deposit"] for r in result)}/{len(result)} '
               'positioned and marked with simulated deposit')
 
-    save_csv(args.output/'task12_pid_position_results.csv', results)
+    save_csv(args.output/'pid_position_results.csv', results)
     numerical = [r['position_error_mm'] for r in results if np.isfinite(r['position_error_mm'])]
     complete = sum(bool(r['simulated_deposit']) for r in results)
     summary = {'n_targets': len(results), 'n_simulated_deposits': complete,
@@ -136,7 +136,7 @@ def main() -> None:
                'error_definition': '3-D pipette pose minus requested *mapped* target; '
                                    'NOT independently measured root-tip error',
                'calibration_verified_all': all(i['calibration_verified'] for i in calib_info.values())}
-    (args.output/'task12_pid_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
+    (args.output/'pid_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     print(json.dumps(summary, indent=2))
 
 

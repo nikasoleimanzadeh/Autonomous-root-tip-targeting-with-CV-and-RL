@@ -4,7 +4,7 @@ Fine plant roots occupy very few pixels and are easy to lose during preprocessin
 
 ## Model and data preparation
 
-The [training notebook](task_5_training.ipynb) uses **512 × 512** patches, residual blocks, group normalization, and a combined Dice, binary cross-entropy, and soft-clDice loss. Root-density-aware sampling helps prevent nearly empty patches from dominating optimization.
+The [training notebook](unet_training.ipynb) uses **512 × 512** patches, residual blocks, group normalization, and a combined Dice, binary cross-entropy, and soft-clDice loss. Root-density-aware sampling helps prevent nearly empty patches from dominating optimization.
 
 The documented training experiment used **9,600 training patches** and **612 validation patches** drawn from distinct imaging groups. The validation protocol and grouping are described in the notebook.
 
@@ -14,8 +14,8 @@ The best reported validation **F1 is 0.8024**, with early stopping restoring the
 
 ## Files
 
-- [`task_5_training.ipynb`](task_5_training.ipynb): training configuration, loss design, and learning curves
-- [`task_5_inference.ipynb`](task_5_inference.ipynb): raw-image inference, prediction reconstruction, and mask checks
+- [`unet_training.ipynb`](unet_training.ipynb): training configuration, loss design, and learning curves
+- [`unet_inference.ipynb`](unet_inference.ipynb): raw-image inference, prediction reconstruction, and mask checks
 
 The original NPEC-data-trained `.h5` checkpoint and client-derived prediction images **must not be published**. To reproduce a public demonstration, train a new model on permitted public or synthetic data and document its license and evaluation separately.
 

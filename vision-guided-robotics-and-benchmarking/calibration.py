@@ -1,4 +1,4 @@
-"""Task 12: convert Task 7 Petri-crop pixels into OT-2 world XY (metres).
+"""vision-guided robotics integration: convert root architecture extraction Petri-crop pixels into OT-2 world XY (metres).
 
 The mapping is *either* a measured affine per plate or an explicitly acknowledged
 simulation assumption. An affine algebra test does not validate the actual plate
@@ -42,7 +42,7 @@ class PlateMap:
         object.__setattr__(self, "matrix", matrix)
 
     def pixel_to_world(self, x_px: float, y_px: float) -> np.ndarray:
-        """Task 7 tip_x is image column; tip_y is image row, both crop-relative."""
+        """root architecture extraction tip_x is image column; tip_y is image row, both crop-relative."""
         if not (np.isfinite(x_px) and np.isfinite(y_px)):
             raise ValueError("Pixel coordinates are not finite")
         if not (0 <= x_px < self.width_px and 0 <= y_px < self.height_px):

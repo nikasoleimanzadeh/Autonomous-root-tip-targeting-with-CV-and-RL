@@ -160,11 +160,11 @@ def main() -> None:
     )
     parser.add_argument(
         "--tips-csv", type=Path,
-        default=ROOT / "task12_cv_handoff" / "task7_primary_root_lengths.csv",
+        default=ROOT / "task12_cv_handoff" / "primary_root_lengths.csv",
     )
     parser.add_argument("--max-plates", type=int, default=3)
     parser.add_argument("--with-sim", action="store_true", help="Check loaded specimen pose in PyBullet")
-    parser.add_argument("--output", type=Path, default=HERE / "results" / "task12_calibration_checks.json")
+    parser.add_argument("--output", type=Path, default=HERE / "results" / "calibration_checks.json")
     args = parser.parse_args()
     if args.max_plates < 1:
         parser.error("--max-plates must be >= 1")

@@ -14,7 +14,7 @@ MAX_PREVIEW_DIM = 900
 
 
 def main() -> None:
-    table = OUTPUT / '07_primary_roots' / 'task7_primary_root_lengths.csv'
+    table = OUTPUT / '07_primary_roots' / 'primary_root_lengths.csv'
     metadata = OUTPUT / 'petri_crop_metadata.csv'
     for p in (table, metadata):
         if not p.exists():
@@ -23,7 +23,7 @@ def main() -> None:
     if not photos:
         raise FileNotFoundError('No saved Petri crop images in 01_petri_crops')
     with zipfile.ZipFile(DEST, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
-        z.write(table, 'task7_primary_root_lengths.csv')
+        z.write(table, 'primary_root_lengths.csv')
         z.write(metadata, 'petri_crop_metadata.csv')
         for img_path in photos:
             img = cv2.imread(str(img_path), cv2.IMREAD_COLOR)

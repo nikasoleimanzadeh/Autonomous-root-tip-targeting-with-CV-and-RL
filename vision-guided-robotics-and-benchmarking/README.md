@@ -11,7 +11,7 @@ This module links measured root-tip positions to robot motion commands in the OT
 5. Approach and settle above each target with the selected controller.
 6. Record the simulated trajectory, target error, and optional deposit visualization.
 
-The core scripts are [`cv_adapter.py`](cv_adapter.py), [`calibration.py`](calibration.py), [`run_integration.py`](run_integration.py), and [`benchmark_task13.py`](benchmark_task13.py). The [`tests/`](tests/) and [`results/`](results/) directories contain the corresponding experiments and recorded outcomes.
+The core scripts are [`cv_adapter.py`](cv_adapter.py), [`calibration.py`](calibration.py), [`run_integration.py`](run_integration.py), and [`benchmark_controllers.py`](benchmark_controllers.py). The [`tests/`](tests/) and [`results/`](results/) directories contain the corresponding experiments and recorded outcomes.
 
 ## A critical distinction: mapping vs. physical calibration
 
